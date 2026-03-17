@@ -154,7 +154,7 @@ export const education = [
   {
     id: 2,
     img: vpsLogo,
-    school: "Vatsalya Public School Govardhan, Mathura",
+    school: "Changu Kana Thakur Jr College, Panvel",
     date: "Aug 2021 - Jun 2023",
     grade: "78.17%",
     desc: "I completed my class 12 education from Changu Kana Thakur Jr College, Panvel, under the HSC board, where I studied Physics, Chemistry, and Mathematics (PCM) with Computer Science.",
