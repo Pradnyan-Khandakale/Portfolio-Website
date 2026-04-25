@@ -12,7 +12,6 @@ const Work = () => {
     setSelectedProject(null);
   };
 
-  // ✅ ESC KEY CLOSE SUPPORT
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === "Escape") {
@@ -22,7 +21,7 @@ const Work = () => {
 
     if (selectedProject) {
       window.addEventListener("keydown", handleEsc);
-      document.body.style.overflow = "hidden"; // prevent bg scroll
+      document.body.style.overflow = "hidden";
     }
 
     return () => {
@@ -39,19 +38,34 @@ const Work = () => {
       {/* SECTION TITLE */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">PROJECTS</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4" />
+
+        {/* 🔄 Purple → Green */}
+        <div className="w-32 h-1 bg-green-500 mx-auto mt-4" />
+
         <p className="text-gray-400 mt-4 text-lg font-semibold">
           A showcase of projects highlighting my skills and experience
         </p>
       </div>
 
       {/* PROJECT GRID */}
-      <div className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div
+        data-aos="fade-up"
+        className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      >
         {projects.map((project) => (
           <div
             key={project.id}
             onClick={() => handleOpenModal(project)}
-            className="border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-all duration-300"
+            className="
+              border border-white/20 
+              bg-gray-900 backdrop-blur-md 
+              rounded-2xl shadow-2xl overflow-hidden cursor-pointer
+              
+              transition-all duration-300 delay-100
+              
+              hover:-translate-y-2
+              hover:shadow-[0_0_35px_rgba(34,197,94,0.5)]
+            "
           >
             <div className="p-4">
               <img
@@ -65,6 +79,7 @@ const Work = () => {
               <h3 className="text-2xl font-bold text-white mb-2">
                 {project.title}
               </h3>
+
               <p className="text-gray-500 line-clamp-3 mb-4">
                 {project.description}
               </p>
@@ -73,7 +88,11 @@ const Work = () => {
                 {project.tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="bg-[#251f38] text-xs text-purple-400 px-2 py-1 rounded-full"
+                    className="
+                      bg-[#0f1a14] text-xs text-green-400 
+                      px-2 py-1 rounded-full
+                      border border-green-500/20
+                    "
                   >
                     {tag}
                   </span>
@@ -88,17 +107,17 @@ const Work = () => {
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4">
           <div className="relative w-full max-w-4xl max-h-[90vh] bg-gray-900 rounded-2xl shadow-2xl overflow-hidden">
-            {/* CLOSE BUTTON (ALWAYS VISIBLE) */}
+            {/* CLOSE BUTTON */}
             <button
               onClick={handleCloseModal}
-              className="absolute top-4 right-4 z-50 text-white text-3xl font-bold hover:text-purple-500"
+              className="absolute top-4 right-4 z-50 text-white text-3xl font-bold 
+              transition duration-300 hover:text-green-400"
             >
               &times;
             </button>
 
-            {/* SCROLLABLE CONTENT */}
+            {/* CONTENT */}
             <div className="overflow-y-auto max-h-[90vh]">
-              {/* IMAGE */}
               <div className="p-6">
                 <img
                   src={selectedProject.image}
@@ -107,7 +126,6 @@ const Work = () => {
                 />
               </div>
 
-              {/* CONTENT */}
               <div className="px-6 pb-8">
                 <h3 className="text-3xl font-bold text-white mb-4">
                   {selectedProject.title}
@@ -117,23 +135,34 @@ const Work = () => {
                   {selectedProject.description}
                 </p>
 
+                {/* TAGS */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedProject.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="bg-[#251f38] text-xs text-purple-400 px-2 py-1 rounded-full"
+                      className="
+                        bg-[#0f1a14] text-xs text-green-400 
+                        px-2 py-1 rounded-full
+                        border border-green-500/20
+                      "
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
+                {/* BUTTONS */}
                 <div className="flex gap-4">
                   <a
                     href={selectedProject.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-1/2 bg-gray-800 hover:bg-purple-800 text-gray-300 px-4 py-2 rounded-xl text-center font-semibold"
+                    className="
+                      w-1/2 bg-gray-800 
+                      hover:bg-green-900 
+                      text-gray-300 px-4 py-2 rounded-xl text-center font-semibold
+                      transition duration-300
+                    "
                   >
                     View Code
                   </a>
@@ -142,7 +171,13 @@ const Work = () => {
                     href={selectedProject.webapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-1/2 bg-purple-600 hover:bg-purple-800 text-white px-4 py-2 rounded-xl text-center font-semibold"
+                    className="
+                      w-1/2 bg-green-600 
+                      hover:bg-green-500 
+                      text-white px-4 py-2 rounded-xl text-center font-semibold
+                      transition duration-300
+                      hover:shadow-[0_0_20px_rgba(34,197,94,0.6)]
+                    "
                   >
                     View Live
                   </a>

@@ -10,7 +10,10 @@ const Skills = () => (
     {/* Section Title */}
     <div className="text-center mb-10">
       <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
-      <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2" />
+
+      {/* 🔄 Purple → Green */}
+      <div className="w-24 h-1 bg-green-500 mx-auto mt-2" />
+
       <p className="text-gray-400 mt-4 text-lg font-semibold">
         A collection of my technical skills and expertise honed through various
         projects and experiences
@@ -18,7 +21,10 @@ const Skills = () => (
     </div>
 
     {/* Skill Categories */}
-    <div className="flex flex-wrap gap-x-5 gap-y-10 justify-between">
+    <div
+      data-aos="fade-up"
+      className="flex flex-wrap gap-x-5 gap-y-10 justify-between"
+    >
       {SkillsInfo.map((category) => (
         <div
           key={category.title}
@@ -26,10 +32,12 @@ const Skills = () => (
             bg-gray-900 backdrop-blur-md
             px-6 sm:px-10 py-10
             w-full sm:w-[48%]
-            rounded-2xl border border-white
-            shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]
-            hover:shadow-[0_0_25px_4px_rgba(130,69,236,0.5)]
-            transition-shadow duration-300
+            rounded-2xl border border-white/20
+            
+            shadow-[0_0_20px_rgba(34,197,94,0.25)]
+            hover:shadow-[0_0_35px_rgba(34,197,94,0.5)]
+            
+            transition-all duration-300 delay-100
           "
         >
           <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-6 text-center">
@@ -43,14 +51,18 @@ const Skills = () => (
                 key={skill.name}
                 title={skill.name}
                 className="
-    flex items-center justify-center gap-2
-    h-14 px-3
-    border-2 border-gray-700 rounded-full
-    bg-transparent
-    transition-all duration-300
-    hover:scale-105 hover:border-[#8245ec]
-    hover:bg-gray-800/50 hover:shadow-lg
-  "
+                  flex items-center justify-center gap-2
+                  h-14 px-3
+                  border-2 border-gray-700 rounded-full
+                  bg-transparent
+                  
+                  transition-all duration-300 delay-100
+                  
+                  hover:scale-105 
+                  hover:border-green-500
+                  hover:bg-gray-800/50 
+                  hover:shadow-[0_0_12px_rgba(34,197,94,0.6)]
+                "
               >
                 <img
                   src={skill.logo}
