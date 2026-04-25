@@ -20,7 +20,7 @@ const About = () => {
             Pradnyan Khandakale
           </h2>
           {/* Skills Heading with Typing Effect */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#22c55e] leading-tight">
             <span className="text-white">I am </span>
             <Typewriter
               words={[
@@ -50,10 +50,11 @@ const About = () => {
             href="https://drive.google.com/file/d/19y00CPGH3SYubY3cu_eWeaufMmrca495/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
+            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-[0_0_40px_rgba(34,197,94,0.7)]"
             style={{
-              background: "linear-gradient(90deg, #8245ec, #a855f7)",
-              boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
+              background: "linear-gradient(90deg, #16a34a, #22c55e)",
+              boxShadow:
+                "0 0 10px rgba(34,197,94,0.6), 0 0 30px rgba(34,197,94,0.4)",
             }}
           >
             DOWNLOAD CV
@@ -67,7 +68,7 @@ const About = () => {
     sm:w-56 sm:h-56
     md:w-72 md:h-72
     lg:w-80 lg:h-80
-    rounded-full border-4 border-purple-700
+    rounded-full border-4 border-green-400 
     transition-transform duration-300 ease-out
     hover:scale-105
   "
@@ -76,7 +77,7 @@ const About = () => {
               src={profileImage}
               alt="Pradnyan Khandakale"
               className="w-full h-full rounded-full object-cover
-               shadow-[0_15px_40px_rgba(130,69,236,0.5)]"
+               shadow-[0_15px_40px_rgba(34,197,94,0.5)]"
             />
           </div>
         </div>

@@ -1,14 +1,7 @@
 import React from "react";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
-  // Smooth scroll function
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -19,12 +12,12 @@ const Footer = () => {
   return (
     <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
       <div className="container mx-auto text-center">
-        {/* Name / Logo */}
-        <h2 className="text-xl font-semibold text-purple-500">
+        {/* 🔄 Name / Logo */}
+        <h2 className="text-xl font-semibold text-green-500">
           Pradnyan Khandakale
         </h2>
 
-        {/* Navigation Links - Responsive */}
+        {/* Navigation Links */}
         <nav className="flex flex-wrap justify-center space-x-4 sm:space-x-6 mt-4">
           {[
             { name: "About", id: "about" },
@@ -36,46 +29,40 @@ const Footer = () => {
             <button
               key={index}
               onClick={() => handleScroll(item.id)}
-              className="hover:text-purple-500 text-sm sm:text-base my-1"
+              className="text-sm sm:text-base my-1 
+              transition-all duration-300
+              hover:text-green-400 hover:scale-105"
             >
               {item.name}
             </button>
           ))}
         </nav>
 
-        {/* Social Media Icons - Responsive */}
+        {/* Social Icons */}
         <div className="flex flex-wrap justify-center space-x-4 mt-6">
           {[
-            {
-              icon: <FaFacebook />,
-              link: "",
-            },
-            {
-              icon: <FaTwitter />,
-              link: "",
-            },
-            {
-              icon: <FaLinkedin />,
-              link: "",
-            },
-            {
-              icon: <FaInstagram />,
-              link: "",
-            },
+            { icon: <FaFacebook />, link: "" },
+            { icon: <FaTwitter />, link: "" },
+            { icon: <FaLinkedin />, link: "" },
+            { icon: <FaInstagram />, link: "" },
           ].map((item, index) => (
             <a
               key={index}
               href={item.link}
               target="_self"
               rel="noopener noreferrer"
-              className="text-xl hover:text-purple-500 transition-transform transform hover:scale-110"
+              className="text-xl 
+              transition-all duration-300 delay-100
+              hover:text-green-400 
+              hover:scale-110 
+              hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.7)]"
             >
               {item.icon}
             </a>
           ))}
         </div>
 
-        {/* Copyright Text */}
+        {/* Copyright */}
         <p className="text-sm text-gray-400 mt-6">
           © 2025 Pradnyan Khandakale. All rights reserved.
         </p>

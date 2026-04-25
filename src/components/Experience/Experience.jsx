@@ -10,7 +10,10 @@ const Experience = () => {
       {/* Section Title */}
       <div className="text-center mb-20">
         <h2 className="text-4xl font-bold text-white">EXPERIENCE</h2>
-        <div className="w-32 h-1 bg-[#8245ec] mx-auto mt-4"></div>
+
+        {/* 🔄 Purple → Green */}
+        <div className="w-32 h-1 bg-green-500 mx-auto mt-4"></div>
+
         <p className="text-gray-400 mt-4 text-lg font-semibold">
           A collection of my work experience and roles across organizations
         </p>
@@ -19,7 +22,7 @@ const Experience = () => {
       {/* Timeline Wrapper */}
       <div className="relative">
         {/* Vertical Timeline Line */}
-        <div className="absolute left-4 md:left-1/2 top-0 h-full w-[2px] bg-white/30 md:-translate-x-1/2"></div>
+        <div className="absolute left-4 md:left-1/2 top-0 h-full w-[2px] bg-green-500/30 md:-translate-x-1/2"></div>
 
         {/* Experience Items */}
         {experiences.map((exp, index) => {
@@ -32,8 +35,8 @@ const Experience = () => {
                 isLeft ? "md:justify-start" : "md:justify-end"
               }`}
             >
-              {/* Timeline Dot */}
-              <div className="absolute left-4 md:left-1/2 -translate-x-1/2 z-20 w-12 h-12 rounded-full bg-gray-900 border-4 border-[#8245ec] flex items-center justify-center">
+              {/* 🔄 Timeline Dot */}
+              <div className="absolute left-4 md:left-1/2 -translate-x-1/2 z-20 w-12 h-12 rounded-full bg-gray-900 border-4 border-green-500 flex items-center justify-center">
                 <img
                   src={exp.img}
                   alt={exp.company}
@@ -41,11 +44,17 @@ const Experience = () => {
                 />
               </div>
 
-              {/* Experience Card */}
+              {/* 🔄 Experience Card */}
               <div
+                data-aos={isLeft ? "fade-right" : "fade-left"}
                 className={`w-full md:w-[46%] bg-gray-900 border border-white/20 rounded-2xl
-                p-6 md:p-8 pl-14 md:pl-8 shadow-[0_0_25px_rgba(130,69,236,0.35)]
-                transition-transform duration-300 hover:scale-[1.02]
+                p-6 md:p-8 pl-14 md:pl-8 
+                shadow-[0_0_25px_rgba(34,197,94,0.35)]
+                
+                transition-all duration-300 delay-150
+                hover:scale-[1.02]
+                hover:shadow-[0_0_40px_rgba(34,197,94,0.6)]
+                
                 ${isLeft ? "md:ml-0 md:mr-auto" : "md:mr-0 md:ml-auto"}`}
               >
                 {/* Header */}
@@ -72,14 +81,16 @@ const Experience = () => {
                   {exp.desc}
                 </p>
 
-                {/* Skills */}
+                {/* 🔄 Skills */}
                 <div className="mt-4">
                   <h4 className="text-white font-medium mb-2">Skills:</h4>
                   <ul className="flex flex-wrap gap-2">
                     {exp.skills.map((skill, i) => (
                       <li
                         key={i}
-                        className="px-3 py-1 text-xs rounded-md bg-[#8245ec]/80 text-white border border-white/20"
+                        className="px-3 py-1 text-xs rounded-md 
+                        bg-green-500/80 text-white border border-green-300/30
+                        transition duration-300 hover:bg-green-400"
                       >
                         {skill}
                       </li>

@@ -12,22 +12,18 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_9mj7d3m", // Replace with your EmailJS Service ID
-        "template_isd2exw", // Replace with your EmailJS Template ID
+        "service_9mj7d3m",
+        "template_isd2exw",
         form.current,
-        "l0wtA5yzAU7DizpXD" // Replace with your EmailJS Public Key
+        "l0wtA5yzAU7DizpXD",
       )
       .then(
         () => {
           setIsSent(true);
-          form.current.reset(); // Reset form fields after sending
+          form.current.reset();
           toast.success("Message sent successfully! ✅", {
             position: "top-right",
             autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
             theme: "dark",
           });
         },
@@ -36,13 +32,9 @@ const Contact = () => {
           toast.error("Failed to send message. Please try again.", {
             position: "top-right",
             autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
             theme: "dark",
           });
-        }
+        },
       );
   };
 
@@ -51,13 +43,15 @@ const Contact = () => {
       id="contact"
       className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw]"
     >
-      {/* Toast Container */}
       <ToastContainer />
 
       {/* Section Title */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">CONTACT</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
+
+        {/* 🔄 Purple → Green */}
+        <div className="w-32 h-1 bg-green-500 mx-auto mt-4"></div>
+
         <p className="text-gray-400 mt-4 text-lg font-semibold">
           I’d love to hear from you—reach out for any opportunities or
           questions!
@@ -65,7 +59,7 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="mt-8 w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
+      <div className="mt-8 w-full max-w-md bg-[#0a0f0d] p-6 rounded-lg shadow-lg border border-gray-700">
         <h3 className="text-xl font-semibold text-white text-center">
           Connect With Me <span className="ml-1">🚀</span>
         </h3>
@@ -75,39 +69,43 @@ const Contact = () => {
           onSubmit={sendEmail}
           className="mt-4 flex flex-col space-y-4"
         >
+          {/* 🔄 Input Fields */}
           <input
             type="email"
             name="user_email"
             placeholder="Your Email"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className="w-full p-3 rounded-md bg-[#101a14] text-white border border-gray-600 focus:outline-none focus:border-green-500"
           />
+
           <input
             type="text"
             name="user_name"
             placeholder="Your Name"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className="w-full p-3 rounded-md bg-[#101a14] text-white border border-gray-600 focus:outline-none focus:border-green-500"
           />
+
           <input
             type="text"
             name="subject"
             placeholder="Subject"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className="w-full p-3 rounded-md bg-[#101a14] text-white border border-gray-600 focus:outline-none focus:border-green-500"
           />
+
           <textarea
             name="message"
             placeholder="Message"
             rows="4"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className="w-full p-3 rounded-md bg-[#101a14] text-white border border-gray-600 focus:outline-none focus:border-green-500"
           />
 
-          {/* Send Button */}
+          {/* 🔄 Button */}
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 text-white font-semibold rounded-md hover:opacity-90 transition"
+            className="w-full bg-gradient-to-r from-green-600 to-green-400 py-3 text-white font-semibold rounded-md hover:shadow-[0_0_25px_rgba(34,197,94,0.6)] transition duration-300"
           >
             Send
           </button>
