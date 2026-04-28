@@ -105,7 +105,10 @@ const Work = () => {
 
       {/* MODAL */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4">
+        <div
+          data-aos="fade-up"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4"
+        >
           <div className="relative w-full max-w-4xl max-h-[90vh] bg-gray-900 rounded-2xl shadow-2xl overflow-hidden">
             {/* CLOSE BUTTON */}
             <button

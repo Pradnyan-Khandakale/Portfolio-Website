@@ -57,7 +57,7 @@ const About = () => {
                 "0 0 10px rgba(34,197,94,0.6), 0 0 30px rgba(34,197,94,0.4)",
             }}
           >
-            DOWNLOAD CV
+            DOWNLOAD RESUME
           </a>
         </div>
         {/* Right Side */}

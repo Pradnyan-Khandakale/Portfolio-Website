@@ -21,12 +21,10 @@ const Skills = () => (
     </div>
 
     {/* Skill Categories */}
-    <div
-      data-aos="fade-up"
-      className="flex flex-wrap gap-x-5 gap-y-10 justify-between"
-    >
+    <div className="flex flex-wrap gap-x-5 gap-y-10 justify-between">
       {SkillsInfo.map((category) => (
         <div
+          data-aos="fade-up"
           key={category.title}
           className="
             bg-gray-900 backdrop-blur-md
@@ -48,6 +46,7 @@ const Skills = () => (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full">
             {category.skills.map((skill) => (
               <div
+                data-aos="fade-up"
                 key={skill.name}
                 title={skill.name}
                 className="
