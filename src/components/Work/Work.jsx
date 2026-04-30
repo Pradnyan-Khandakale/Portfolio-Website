@@ -108,13 +108,18 @@ const Work = () => {
         <div
           data-aos="fade-up"
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 dark:bg-black/80 backdrop-blur-sm transition-colors duration-300 px-4"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+          aria-describedby="modal-description"
         >
           <div className="relative w-full max-w-4xl max-h-[90vh] bg-white dark:bg-gray-900 transition-colors duration-300 rounded-2xl shadow-2xl overflow-hidden">
             {/* CLOSE BUTTON */}
             <button
               onClick={handleCloseModal}
+              aria-label="Close project modal"
               className="absolute top-4 right-4 z-50 text-gray-900 dark:text-white text-3xl font-bold 
-              transition-colors duration-300 hover:text-green-500 dark:hover:text-green-400"
+              transition-colors duration-300 hover:text-green-500 dark:hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 rounded"
             >
               &times;
             </button>
@@ -130,11 +135,11 @@ const Work = () => {
               </div>
 
               <div className="px-6 pb-8">
-                <h3 className="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300 mb-4">
+                <h3 id="modal-title" className="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300 mb-4">
                   {selectedProject.title}
                 </h3>
 
-                <p className="text-gray-700 dark:text-gray-400 transition-colors duration-300 mb-6">
+                <p id="modal-description" className="text-gray-700 dark:text-gray-400 transition-colors duration-300 mb-6">
                   {selectedProject.description}
                 </p>
 
