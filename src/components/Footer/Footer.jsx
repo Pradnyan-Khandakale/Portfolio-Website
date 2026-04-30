@@ -10,7 +10,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
+    <footer className="text-gray-900 dark:text-white transition-colors duration-300 py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
       <div className="container mx-auto text-center">
         {/* 🔄 Name / Logo */}
         <h2 className="text-xl font-semibold text-green-500">
@@ -63,7 +63,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <p className="text-sm text-gray-400 mt-6">
+        <p className="text-sm text-gray-700 dark:text-gray-400 transition-colors duration-300 mt-6">
           © 2025 Pradnyan Khandakale. All rights reserved.
         </p>
       </div>

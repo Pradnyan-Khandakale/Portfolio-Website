@@ -37,12 +37,12 @@ const Work = () => {
     >
       {/* SECTION TITLE */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">PROJECTS</h2>
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white transition-colors duration-300">PROJECTS</h2>
 
         {/* 🔄 Purple → Green */}
         <div className="w-32 h-1 bg-green-500 mx-auto mt-4" />
 
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
+        <p className="text-gray-700 dark:text-gray-400 transition-colors duration-300 mt-4 text-lg font-semibold">
           A showcase of projects highlighting my skills and experience
         </p>
       </div>
@@ -57,14 +57,14 @@ const Work = () => {
             key={project.id}
             onClick={() => handleOpenModal(project)}
             className="
-              border border-white/20 
-              bg-gray-900 backdrop-blur-md 
-              rounded-2xl shadow-2xl overflow-hidden cursor-pointer
+              border border-gray-200 dark:border-white/20 
+              bg-white dark:bg-gray-900 backdrop-blur-md 
+              rounded-2xl shadow-md dark:shadow-2xl overflow-hidden cursor-pointer
               
-              transition-all duration-300 delay-100
+              transition-colors duration-300 delay-100
               
               hover:-translate-y-2
-              hover:shadow-[0_0_35px_rgba(34,197,94,0.5)]
+              hover:shadow-xl dark:hover:shadow-[0_0_35px_rgba(34,197,94,0.5)]
             "
           >
             <div className="p-4">
@@ -76,11 +76,11 @@ const Work = () => {
             </div>
 
             <div className="p-6">
-              <h3 className="text-2xl font-bold text-white mb-2">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300 mb-2">
                 {project.title}
               </h3>
 
-              <p className="text-gray-500 line-clamp-3 mb-4">
+              <p className="text-gray-700 dark:text-gray-500 transition-colors duration-300 line-clamp-3 mb-4">
                 {project.description}
               </p>
 
@@ -89,9 +89,9 @@ const Work = () => {
                   <span
                     key={i}
                     className="
-                      bg-[#0f1a14] text-xs text-green-400 
+                      bg-green-50 dark:bg-[#0f1a14] text-xs text-green-700 dark:text-green-400 transition-colors duration-300
                       px-2 py-1 rounded-full
-                      border border-green-500/20
+                      border border-green-200 dark:border-green-500/20
                     "
                   >
                     {tag}
@@ -107,14 +107,14 @@ const Work = () => {
       {selectedProject && (
         <div
           data-aos="fade-up"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 dark:bg-black/80 backdrop-blur-sm transition-colors duration-300 px-4"
         >
-          <div className="relative w-full max-w-4xl max-h-[90vh] bg-gray-900 rounded-2xl shadow-2xl overflow-hidden">
+          <div className="relative w-full max-w-4xl max-h-[90vh] bg-white dark:bg-gray-900 transition-colors duration-300 rounded-2xl shadow-2xl overflow-hidden">
             {/* CLOSE BUTTON */}
             <button
               onClick={handleCloseModal}
-              className="absolute top-4 right-4 z-50 text-white text-3xl font-bold 
-              transition duration-300 hover:text-green-400"
+              className="absolute top-4 right-4 z-50 text-gray-900 dark:text-white text-3xl font-bold 
+              transition-colors duration-300 hover:text-green-500 dark:hover:text-green-400"
             >
               &times;
             </button>
@@ -130,11 +130,11 @@ const Work = () => {
               </div>
 
               <div className="px-6 pb-8">
-                <h3 className="text-3xl font-bold text-white mb-4">
+                <h3 className="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300 mb-4">
                   {selectedProject.title}
                 </h3>
 
-                <p className="text-gray-400 mb-6">
+                <p className="text-gray-700 dark:text-gray-400 transition-colors duration-300 mb-6">
                   {selectedProject.description}
                 </p>
 
@@ -144,9 +144,9 @@ const Work = () => {
                     <span
                       key={i}
                       className="
-                        bg-[#0f1a14] text-xs text-green-400 
+                        bg-green-50 dark:bg-[#0f1a14] text-xs text-green-700 dark:text-green-400 transition-colors duration-300
                         px-2 py-1 rounded-full
-                        border border-green-500/20
+                        border border-green-200 dark:border-green-500/20
                       "
                     >
                       {tag}
@@ -161,10 +161,10 @@ const Work = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
-                      w-1/2 bg-gray-800 
-                      hover:bg-green-900 
-                      text-gray-300 px-4 py-2 rounded-xl text-center font-semibold
-                      transition duration-300
+                      w-1/2 bg-gray-200 dark:bg-gray-800 
+                      hover:bg-gray-300 dark:hover:bg-green-900 
+                      text-gray-800 dark:text-gray-300 px-4 py-2 rounded-xl text-center font-semibold
+                      transition-colors duration-300
                     "
                   >
                     View Code
