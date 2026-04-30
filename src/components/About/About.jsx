@@ -1,27 +1,33 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import profileImage from "../../assets/profile2.png";
+import BlurBlob from "../../BlurBlob";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      className="relative overflow-hidden py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
     >
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
+      <BlurBlob
+        position={{ top: "50%", left: "50%" }}
+        size={{ width: "350px", height: "350px" }}
+      />
+      
+      <div className="relative z-10 flex flex-col-reverse md:flex-row justify-between items-center">
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white transition-colors duration-300 mb-2 leading-tight">
             Hi, I am
           </h1>
           {/* Name */}
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white transition-colors duration-300 mb-4 leading-tight break-words">
             Pradnyan Khandakale
           </h2>
           {/* Skills Heading with Typing Effect */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#22c55e] leading-tight">
-            <span className="text-white">I am </span>
+            <span className="text-gray-900 dark:text-white transition-colors duration-300">I am </span>
             <Typewriter
               words={[
                 "a Python Fullstack Developer",
@@ -39,7 +45,7 @@ const About = () => {
             />
           </h3>
           {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-lg text-gray-700 dark:text-gray-400 transition-colors duration-300 mb-10 mt-8 leading-relaxed">
             Motivated Computer Science fresher seeking AI/ML Engineer, Data
             Analyst, or Full Stack Java Developer roles, with hands-on project
             experience in data analysis, machine learning fundamentals, full
@@ -50,11 +56,9 @@ const About = () => {
             href="https://drive.google.com/file/d/19y00CPGH3SYubY3cu_eWeaufMmrca495/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-[0_0_40px_rgba(34,197,94,0.7)]"
+            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105 shadow-md dark:shadow-[0_0_10px_rgba(34,197,94,0.6),0_0_30px_rgba(34,197,94,0.4)] dark:hover:shadow-[0_0_40px_rgba(34,197,94,0.7)]"
             style={{
               background: "linear-gradient(90deg, #16a34a, #22c55e)",
-              boxShadow:
-                "0 0 10px rgba(34,197,94,0.6), 0 0 30px rgba(34,197,94,0.4)",
             }}
           >
             DOWNLOAD RESUME
@@ -77,7 +81,7 @@ const About = () => {
               src={profileImage}
               alt="Pradnyan Khandakale"
               className="w-full h-full rounded-full object-cover
-               shadow-[0_15px_40px_rgba(34,197,94,0.5)]"
+               shadow-xl dark:shadow-[0_15px_40px_rgba(34,197,94,0.5)]"
             />
           </div>
         </div>

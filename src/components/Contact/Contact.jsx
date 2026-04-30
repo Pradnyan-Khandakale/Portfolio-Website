@@ -47,20 +47,20 @@ const Contact = () => {
 
       {/* Section Title */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">CONTACT</h2>
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white transition-colors duration-300">CONTACT</h2>
 
         {/* 🔄 Purple → Green */}
         <div className="w-32 h-1 bg-green-500 mx-auto mt-4"></div>
 
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
+        <p className="text-gray-700 dark:text-gray-400 transition-colors duration-300 mt-4 text-lg font-semibold">
           I’d love to hear from you—reach out for any opportunities or
           questions!
         </p>
       </div>
 
       {/* Contact Form */}
-      <div className="mt-8 w-full max-w-md bg-[#0a0f0d] p-6 rounded-lg shadow-lg border border-gray-700">
-        <h3 className="text-xl font-semibold text-white text-center">
+      <div className="mt-8 w-full max-w-md bg-white dark:bg-[#0a0f0d] transition-colors duration-300 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white transition-colors duration-300 text-center">
           Connect With Me <span className="ml-1">🚀</span>
         </h3>
 
@@ -75,7 +75,7 @@ const Contact = () => {
             name="user_email"
             placeholder="Your Email"
             required
-            className="w-full p-3 rounded-md bg-[#101a14] text-white border border-gray-600 focus:outline-none focus:border-green-500"
+            className="w-full p-3 rounded-md bg-gray-50 dark:bg-[#101a14] text-gray-900 dark:text-white transition-colors duration-300 border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-green-500"
           />
 
           <input
@@ -83,7 +83,7 @@ const Contact = () => {
             name="user_name"
             placeholder="Your Name"
             required
-            className="w-full p-3 rounded-md bg-[#101a14] text-white border border-gray-600 focus:outline-none focus:border-green-500"
+            className="w-full p-3 rounded-md bg-gray-50 dark:bg-[#101a14] text-gray-900 dark:text-white transition-colors duration-300 border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-green-500"
           />
 
           <input
@@ -91,7 +91,7 @@ const Contact = () => {
             name="subject"
             placeholder="Subject"
             required
-            className="w-full p-3 rounded-md bg-[#101a14] text-white border border-gray-600 focus:outline-none focus:border-green-500"
+            className="w-full p-3 rounded-md bg-gray-50 dark:bg-[#101a14] text-gray-900 dark:text-white transition-colors duration-300 border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-green-500"
           />
 
           <textarea
@@ -99,7 +99,7 @@ const Contact = () => {
             placeholder="Message"
             rows="4"
             required
-            className="w-full p-3 rounded-md bg-[#101a14] text-white border border-gray-600 focus:outline-none focus:border-green-500"
+            className="w-full p-3 rounded-md bg-gray-50 dark:bg-[#101a14] text-gray-900 dark:text-white transition-colors duration-300 border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-green-500"
           />
 
           {/* 🔄 Button */}

@@ -36,24 +36,24 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
+      className={`fixed top-0 w-full z-50 transition-colors duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
         isScrolled
-          ? "bg-[#050414]/50 backdrop-blur-md shadow-md"
+          ? "bg-white/80 dark:bg-[#050414]/50 backdrop-blur-md shadow-md"
           : "bg-transparent"
       }`}
     >
-      <div className="text-white py-5 flex justify-between items-center">
+      <div className="text-gray-900 dark:text-white py-5 flex justify-between items-center transition-colors duration-300">
         {/* 🔄 Logo */}
         <div className="text-lg font-semibold cursor-pointer">
           <span className="text-green-500">&lt;</span>
-          <span className="text-white">Pradnyan</span>
+          <span className="text-gray-900 dark:text-white transition-colors duration-300">Pradnyan</span>
           <span className="text-green-500">/</span>
-          <span className="text-white">Khandakale</span>
+          <span className="text-gray-900 dark:text-white transition-colors duration-300">Khandakale</span>
           <span className="text-green-500">&gt;</span>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300">
+        <ul className="hidden md:flex space-x-8 text-gray-700 dark:text-gray-300 transition-colors duration-300">
           {menuItems.map((item) => (
             <li
               key={item.id}
@@ -74,7 +74,7 @@ const Navbar = () => {
             href="https://github.com/Pradnyan-Khandakale"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 transition-all duration-300 delay-100
+            className="text-gray-900 dark:text-gray-300 transition-all duration-300 delay-100
             hover:text-green-400 hover:scale-110
             hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.7)]"
           >
@@ -85,7 +85,7 @@ const Navbar = () => {
             href="https://www.linkedin.com/in/pradnyan-khandakale/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 transition-all duration-300 delay-100
+            className="text-gray-900 dark:text-gray-300 transition-all duration-300 delay-100
             hover:text-green-400 hover:scale-110
             hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.7)]"
           >
@@ -111,8 +111,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414]/70 backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-white/95 dark:bg-[#050414]/70 backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden transition-colors duration-300">
+          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-700 dark:text-gray-300 transition-colors duration-300">
             {menuItems.map((item) => (
               <li
                 key={item.id}
@@ -131,7 +131,7 @@ const Navbar = () => {
                 href="https://github.com/Pradnyan-Khandakale"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-green-400"
+                className="text-gray-900 dark:text-gray-300 hover:text-green-400 transition-colors duration-300"
               >
                 <FaGithub size={24} />
               </a>
@@ -139,7 +139,7 @@ const Navbar = () => {
                 href="https://www.linkedin.com/in/pradnyan-khandakale/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-green-400"
+                className="text-gray-900 dark:text-gray-300 hover:text-green-400 transition-colors duration-300"
               >
                 <FaLinkedin size={24} />
               </a>

@@ -7,7 +7,7 @@ const BlurBlob = ({ position, size }) => {
 
   return (
     <div
-      className="absolute"
+      className="absolute pointer-events-none z-0"
       style={{
         top: top,
         left: left,
@@ -17,7 +17,7 @@ const BlurBlob = ({ position, size }) => {
       }}
     >
       {/* 🔄 Purple → Green */}
-      <div className="w-full h-full bg-green-500 rounded-full opacity-20 blur-3xl animate-blob"></div>
+      <div className="w-full h-full bg-green-500 rounded-full opacity-10 dark:opacity-20 blur-[80px] md:blur-[120px] animate-blob transition-opacity duration-300"></div>
     </div>
   );
 };
