@@ -32,6 +32,7 @@ const Work = () => {
 
   return (
     <section
+      data-aos="fade-up"
       id="work"
       className="py-24 px-[12vw] md:px-[7vw] lg:px-[12vw] font-sans relative"
     >

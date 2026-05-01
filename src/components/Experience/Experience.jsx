@@ -4,6 +4,7 @@ import { experiences } from "../../constant.js";
 const Experience = () => {
   return (
     <section
+      data-aos="fade-up"
       id="experience"
       className="relative py-24 px-[8vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2"
     >

@@ -3,6 +3,7 @@ import { SkillsInfo } from "../../constant.js";
 
 const Skills = () => (
   <section
+    data-aos="fade-up"
     id="skills"
     className="py-24 px-[12vw] md:px-[7vw] lg:px-[10vw] xl:px-[15vw]
                font-sans bg-skills-gradient clip-path-custom"

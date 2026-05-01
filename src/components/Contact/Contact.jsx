@@ -41,6 +41,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
+      data-aos="fade-up"
       className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw]"
     >
       <ToastContainer />
@@ -59,7 +60,7 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="mt-8 w-full max-w-md bg-white dark:bg-[#0a0f0d] transition-colors duration-300 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+      <div data-aos="fade-up" className="mt-8 w-full max-w-md bg-white dark:bg-[#0a0f0d] transition-colors duration-300 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white transition-colors duration-300 text-center">
           Connect With Me <span className="ml-1">🚀</span>
         </h3>
